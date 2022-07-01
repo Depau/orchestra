@@ -9,7 +9,7 @@
 #@ def gmp_args():
 license: COPYING
 configure: |
-  echo REBUILD ALL
+  echo REBUILD ALL AGAIN
   mkdir -p "$BUILD_DIR"
   extract.sh --into "$BUILD_DIR" "(@= source_url @)"
   cd "$BUILD_DIR" && ./configure \
