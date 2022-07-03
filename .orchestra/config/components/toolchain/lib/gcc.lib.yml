@@ -82,6 +82,7 @@
 #! The sed is required to make `--sysroot=/` work with `--with-gxx-include-dir`
 #! properly.
 configure: |
+  echo asd
   extract.sh --into "$SOURCE_DIR" "(@= source_url @)"
   patch-if-exists "${ORCHESTRA_DOTDIR}/patches/gcc-(@= gcc_version @)-cfns-fix-mismatch-in-gnu_inline-attributes.patch" "$SOURCE_DIR"
   patch-if-exists "${ORCHESTRA_DOTDIR}/patches/gcc-(@= gcc_version @)-cpp-musl-support.patch" "$SOURCE_DIR"
